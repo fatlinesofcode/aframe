@@ -75473,7 +75473,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.5.0 (Date 26-06-2017, Commit #83b833d)');
+console.log('A-Frame Version: 0.5.0 (Date 26-06-2017, Commit #50ccc54)');
 console.log('three Version:', pkg.dependencies['three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
 
@@ -78028,6 +78028,12 @@ function checkHasPositionalTracking () {
   return vrDisplay && vrDisplay.capabilities.hasPosition;
 }
 module.exports.checkHasPositionalTracking = checkHasPositionalTracking;
+
+var mobileDetect = (function () {
+  var _isMobile = false;
+  return new MobileDetect(window.navigator.userAgent);
+})();
+module.exports.mobileDetect = mobileDetect;
 
 /**
  * Checks if browser is mobile.

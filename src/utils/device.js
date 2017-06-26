@@ -46,6 +46,8 @@ var isMobile = (function () {
   var _isMobile = false;
   var md = new MobileDetect(window.navigator.userAgent);
   _isMobile = md.mobile() ? true : false;
+  if(isGearVR())
+  	_isMobile=false;
 
   return function () { return _isMobile; };
 })();
