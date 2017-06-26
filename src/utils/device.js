@@ -32,6 +32,12 @@ function checkHasPositionalTracking () {
 }
 module.exports.checkHasPositionalTracking = checkHasPositionalTracking;
 
+var mobileDetect = (function () {
+  var _isMobile = false;
+  return new MobileDetect(window.navigator.userAgent);
+})();
+module.exports.mobileDetect = mobileDetect;
+
 /**
  * Checks if browser is mobile.
  * @return {Boolean} True if mobile browser detected.
