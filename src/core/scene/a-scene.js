@@ -502,6 +502,8 @@ function getCanvasSize (canvasEl, embedded) {
 }
 
 function requestFullscreen (canvas) {
+  // return;
+  var canvas = document.documentElement;
   var requestFullscreen =
     canvas.requestFullscreen ||
     canvas.webkitRequestFullscreen ||

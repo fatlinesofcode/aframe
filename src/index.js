@@ -31,7 +31,7 @@ if (utils.device.isIOSOlderThan10(navigator.userAgent)) {
 }
 
 // WebVR polyfill
-require('webvr-polyfill');
+require('../vendor/webvr-polyfill');
 
 require('present'); // Polyfill `performance.now()`.
 // CSS.
@@ -70,7 +70,7 @@ require('./core/a-mixin');
 require('./extras/components/');
 require('./extras/primitives/');
 
-console.log('A-Frame Version: 0.5.0 (Date 26-06-2017, Commit #50ccc54)');
+console.log('A-Frame Version: 0.5.0 (Date 03-07-2017, Commit #f6e48c70)');
 console.log('three Version:', pkg.dependencies['three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
 
